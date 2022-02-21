@@ -1,0 +1,228 @@
+@import "./enter.html";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+@media screen and (min-width: 1200px) {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .background {
+    background-color: #f4f5f6;
+  }
+  .enter {
+    top: -8px;
+    width: 100%;
+    max-width: 1440px;
+    height: 100vh;
+    /* border: 2px solid rgb(240, 0, 0); */
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-color: #f4f5f6;
+    /* font-family: "Noto Sans TC", sans-serif; */
+  }
+
+  .logo {
+    /* border: 2px rgb(252, 26, 26) solid; */
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    top: 40px;
+    left: 50px;
+  }
+
+  .run_font {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0;
+    margin: auto;
+    width: 3120px;
+    height: 120px;
+    font-size: 90px;
+    font-weight: 800;
+    animation: run 38s linear infinite;
+    overflow: hidden;
+    letter-spacing: 0.09em;
+    z-index: 0;
+  }
+
+  @keyframes run {
+    0% {
+      left: 0;
+      transform: translateX(0%);
+    }
+
+    100% {
+      left: 100%;
+      transform: translateX(-100%);
+    }
+  }
+
+  .square {
+    margin-top: 4%;
+    margin-left: 53%;
+    width: 30%;
+    height: 90%;
+    position: relative;
+    color: rgb(202, 202, 202);
+    z-index: 2;
+    /* border: 1px solid #333; */
+    background: linear-gradient(
+      -45deg,
+      rgb(173, 173, 173) 0%,
+      rgb(236, 236, 236) 50%,
+      rgb(255, 255, 255) 100%
+    );
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .button {
+    position: absolute;
+    top: 78%;
+    left: 74%;
+    width: 14%;
+    background-color: #000;
+    z-index: 3;
+  }
+
+  .button .text {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    padding: 20px;
+  }
+
+  .button:hover {
+    background-color: rgb(63, 63, 63);
+    transition: 0.3s;
+  }
+
+  .font_botttom {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    top: 75%;
+    left: 7%;
+  }
+
+  .font_botttom h3 {
+    font-size: 48px;
+    margin: 0px;
+  }
+
+  .font_botttom p {
+    font-size: 18px;
+    margin: 0px;
+  }
+
+  .line {
+    content: "";
+    position: absolute;
+    top: 74%;
+    left: 5%;
+    height: 14%;
+    width: 2px;
+    background-color: rgb(224, 224, 224);
+    overflow: hidden;
+  }
+
+  .line_run {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 25%;
+    width: 2px;
+    background-color: rgb(0, 0, 0);
+    animation: line 2s ease-out infinite;
+  }
+
+  @keyframes line {
+    0% {
+      top: 0%;
+    }
+
+    100% {
+      top: 100%;
+    }
+  }
+  .enter_img {
+  }
+  .img1,
+  .img2,
+  .img3,
+  .img4 {
+    z-index: 2;
+    opacity: 1;
+    position: absolute;
+    top: 0%;
+    left: 43%;
+    opacity: 0;
+    max-width: 35vw;
+    filter: alpha(opacity=0);
+
+    -webkit-animation: round 20s linear infinite;
+    animation: round 20s linear infinite;
+  }
+
+  @-webkit-keyframes round {
+    5% {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      /* 0 - 1秒 淡入*/
+    }
+    20% {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      /* 1- 5秒靜止*/
+    }
+    25% {
+      opacity: 0;
+      filter: alpha(opacity=0);
+      /* 5-6秒淡出*/
+    }
+  }
+  @keyframes round {
+    5% {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      /* 0 - 1秒 淡入*/
+    }
+    20% {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      /* 1- 5秒靜止*/
+    }
+    25% {
+      opacity: 0;
+      filter: alpha(opacity=0);
+      /* 5-6秒淡出*/
+    }
+  }
+
+  .img1 {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+  }
+
+  .img2 {
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+  }
+
+  .img3 {
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+  }
+
+  .img4 {
+    -webkit-animation-delay: 15s;
+    animation-delay: 15s;
+  }
+}
